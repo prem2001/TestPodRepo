@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My View Controller-->
+        <scene sceneID="h9b-Za-WAk">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewControllerID" modalPresentationStyle="currentContext" id="N3b-fj-hbR" customClass="MyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Wu-KT-IWu"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Dm-Cp-tJf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lMI-k8-ZCZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Tr-8N-qNf">
+                                <rect key="frame" x="28" y="48" width="318" height="571"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Message" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8D-4f-e4f">
+                                        <rect key="frame" x="8" y="533" width="262" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="edidtingDidBegin:" destination="N3b-fj-hbR" eventType="editingDidBegin" id="c5l-CX-2zI"/>
+                                            <action selector="end:" destination="N3b-fj-hbR" eventType="editingDidEndOnExit" id="gFK-B8-Hmg"/>
+                                        </connections>
+                                    </textField>
+                                    <imageView multipleTouchEnabled="YES" tag="1" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_send_white_18pt" translatesAutoresizingMaskIntoConstraints="NO" id="hcc-3a-2gZ">
+                                        <rect key="frame" x="277" y="530" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <color key="backgroundColor" red="0.039215686274509803" green="0.086274509803921567" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <imageView multipleTouchEnabled="YES" tag="3" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_menu_white_18pt" translatesAutoresizingMaskIntoConstraints="NO" id="ZFa-wU-gbb">
+                                        <rect key="frame" x="275" y="8" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.086274509803921567" green="0.10196078431372549" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <imageView multipleTouchEnabled="YES" tag="2" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_close_white_18pt" highlightedImage="ic_close_white_18pt" translatesAutoresizingMaskIntoConstraints="NO" id="0DP-F9-IgG">
+                                        <rect key="frame" x="8" y="8" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.087368930779502474" green="0.10915849205764216" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="14" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="Br9-Y8-DmN">
+                                        <rect key="frame" x="8" y="56" width="304" height="466"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <variation key="displayGamut=sRGB-heightClass=regular-widthClass=compact">
+                                            <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.48257764570552147" colorSpace="calibratedWhite"/>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="dataSource" destination="N3b-fj-hbR" id="eBl-w7-QEE"/>
+                                            <outlet property="delegate" destination="N3b-fj-hbR" id="lHQ-CY-5wi"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Br9-Y8-DmN" secondAttribute="trailing" constant="6" id="9LT-J1-odV"/>
+                                    <constraint firstAttribute="bottom" secondItem="Br9-Y8-DmN" secondAttribute="bottom" constant="49" id="Zds-zj-1aj"/>
+                                    <constraint firstItem="Br9-Y8-DmN" firstAttribute="top" secondItem="2Tr-8N-qNf" secondAttribute="top" constant="56" id="xss-RC-8A9"/>
+                                    <constraint firstItem="Br9-Y8-DmN" firstAttribute="leading" secondItem="2Tr-8N-qNf" secondAttribute="leading" constant="8" id="z2W-Bf-WpY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Tr-8N-qNf" firstAttribute="top" secondItem="3Wu-KT-IWu" secondAttribute="bottom" constant="40" id="EXe-Di-bZY"/>
+                            <constraint firstItem="1Dm-Cp-tJf" firstAttribute="top" secondItem="2Tr-8N-qNf" secondAttribute="bottom" constant="40" id="PDp-dk-R5P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Tr-8N-qNf" secondAttribute="trailing" constant="5" id="aOx-0s-izA"/>
+                            <constraint firstItem="2Tr-8N-qNf" firstAttribute="leading" secondItem="lMI-k8-ZCZ" secondAttribute="leadingMargin" constant="5" id="lPy-Xa-yml"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chatTable" destination="Br9-Y8-DmN" id="moq-af-HR6"/>
+                        <outlet property="chatTextView" destination="W8D-4f-e4f" id="eoL-28-Bfh"/>
+                        <outlet property="chatView" destination="2Tr-8N-qNf" id="4EW-vE-Lwd"/>
+                        <outlet property="closeImageView" destination="0DP-F9-IgG" id="onr-O2-qCP"/>
+                        <outlet property="mainInterface" destination="lMI-k8-ZCZ" id="7TB-YZ-Uwp"/>
+                        <outlet property="menuImageView" destination="ZFa-wU-gbb" id="9EQ-ZZ-vmn"/>
+                        <outlet property="sendButtonView" destination="hcc-3a-2gZ" id="FjC-7c-bNO"/>
+                        <outlet property="tableView" destination="Br9-Y8-DmN" id="xea-Nz-2lP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hV5-ur-efj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96.799999999999997" y="47.226386806596707"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_close_white_18pt" width="18" height="18"/>
+        <image name="ic_menu_white_18pt" width="18" height="18"/>
+        <image name="ic_send_white_18pt" width="18" height="18"/>
+    </resources>
+</document>
