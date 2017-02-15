@@ -1,0 +1,22 @@
+{
+  "name": "TestPod",
+  "version": "0.1.0",
+  "summary": "A short description of TestPod.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/prem/TestPod",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "prem": "premnath101070@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/prem/TestPod.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TestPod/Classes/**/*"
+}
